@@ -1,0 +1,6 @@
+% Aufgabenblatt 5
+% 5.1 Signalanalyse
+[sample3,fs]=audioread("sample3.wav") 
+y=sample3(1:1000);
+spectrum=fft(y);
+stem(spectrum)
