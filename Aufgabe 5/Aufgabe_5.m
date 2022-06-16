@@ -53,6 +53,11 @@ plot(t,saw+1)
 grid on
 xlabel('t [s]')
 ylabel('Amplitude')
-
-%%
 writematrix(saw,'saegezahn.csv')
+%%
+% 5.3 Fensterfunktion
+saw=readmatrix("saegezahn.csv");
+N=length(saw);
+sawfft=abs(fft(saw))*1/N;
+stem(sawfft)
+grid on;
